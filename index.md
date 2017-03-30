@@ -19,8 +19,8 @@ toc: false
                      </span>
                  </div>
                  <div class="panel-body">
-                     <h4>Getting started</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                     <h4>New? Start here.</h4>
+                     <p>Introductory and background material.</p>
                      <a href="tag_getting_started.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>
@@ -34,8 +34,8 @@ toc: false
                      </span>
                  </div>
                  <div class="panel-body">
-                     <h4>Navigation</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                     <h4>Developer Resources</h4>
+                     <p>Questions and answer articles and tutorials.</p>
                      <a href="tag_navigation.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>
@@ -49,8 +49,8 @@ toc: false
                      </span>
                  </div>
                  <div class="panel-body">
-                     <h4>Single sourcing</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                     <h4>Running in Production</h4>
+                     <p>How to run parts of the solr stack in production.</p>
                      <a href="tag_single_sourcing.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>
@@ -64,8 +64,8 @@ toc: false
                      </span>
                  </div>
                  <div class="panel-body">
-                     <h4>Formatting</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                     <h4>Hydra Development Community</h4>
+                     <p>Contributing, development patterns</p>
                      <a href="tag_formatting.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>

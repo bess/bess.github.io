@@ -730,29 +730,6 @@
    
 
     
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
-
-    
 
 
     
@@ -774,8 +751,8 @@ $('#toc').on('click', 'a', function() {
                      </span>
                  </div>
                  <div class="panel-body">
-                     <h4>Getting started</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                     <h4>New? Start here.</h4>
+                     <p>Introductory and background material.</p>
                      <a href="tag_getting_started.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>
@@ -789,8 +766,8 @@ $('#toc').on('click', 'a', function() {
                      </span>
                  </div>
                  <div class="panel-body">
-                     <h4>Navigation</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                     <h4>Developer Resources</h4>
+                     <p>Questions and answer articles and tutorials.</p>
                      <a href="tag_navigation.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>
@@ -804,8 +781,8 @@ $('#toc').on('click', 'a', function() {
                      </span>
                  </div>
                  <div class="panel-body">
-                     <h4>Single sourcing</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                     <h4>Running in Production</h4>
+                     <p>How to run parts of the solr stack in production.</p>
                      <a href="tag_single_sourcing.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>
@@ -819,8 +796,8 @@ $('#toc').on('click', 'a', function() {
                      </span>
                  </div>
                  <div class="panel-body">
-                     <h4>Formatting</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                     <h4>Hydra Development Community</h4>
+                     <p>Contributing, development patterns</p>
                      <a href="tag_formatting.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>
