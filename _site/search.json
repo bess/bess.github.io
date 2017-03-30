@@ -6,11 +6,33 @@
 
 
 {
+"title": "Formalities",
+"tags": "community",
+"keywords": "contributor license agreements, github",
+"url": "formalities.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "A Guide For The Perplexed Hydra Developer",
 "tags": "getting_started",
 "keywords": "sample homepage",
 "url": "index.html",
 "summary": ""
+}
+,
+
+
+
+{
+"title": "Issues",
+"tags": "community",
+"keywords": "issues, submitting, pull requests,",
+"url": "issues.html",
+"summary": "Issues"
 }
 ,
 
@@ -666,6 +688,17 @@
 
 
 {
+"title": "Orientation",
+"tags": "getting_started",
+"keywords": "hydra orientation",
+"url": "orientation.html",
+"summary": "Orientation: What is Hydra?"
+}
+,
+
+
+
+{
 "title": "Product 1",
 "tags": "",
 "keywords": "mydoc",
@@ -951,6 +984,50 @@
 
 
 
+
+
+
+{
+"title": "Code Guidelines",
+"tags": "",
+"keywords": "",
+"url": "pageshydracode.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Communication",
+"tags": "",
+"keywords": "",
+"url": "pageshydracommunication.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Code review",
+"tags": "",
+"keywords": "",
+"url": "pageshydrareview.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Technical On-boarding",
+"tags": "",
+"keywords": "",
+"url": "pageshydra",
+"summary": ""
+}
+,
 
 
 

@@ -28,7 +28,19 @@
   
   
   <url>
+    <loc>http://localhost:4000/formalities.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/index.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/issues.html</loc>
   </url>
   
   
@@ -388,6 +400,12 @@
   
   
   <url>
+    <loc>http://localhost:4000/orientation.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/p1_landing_page.html</loc>
   </url>
   
@@ -558,6 +576,30 @@
   
   
   
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/pages/hydra/code.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/pages/hydra/communication.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/pages/hydra/review.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/pages/hydra/</loc>
+  </url>
   
   
 </urlset>
