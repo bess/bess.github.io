@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Code Guidelines | Hydra Developer Knowledge Base</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Hydra Developer Knowledge Base</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jekyll Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://github.com/tomjohnson1492/documentation-theme-jekyll" target="_blank">Github Repo</a></li>
+                        
+                        
+                        
+                        <li><a href="https://talk.jekyllrb.com" target="_blank">Jekyll Talk</a></li>
+                        
+                        
+                        
+                        <li><a href="http://jekyllrb.com/docs/home/" target="_blank">Jekyll documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="http://stackoverflow.com/questions/tagged/jekyll" target="_blank">Jekyll on Stack Overflow</a></li>
+                        
+                        
+                        
+                        <li><a href="http://idratherbewriting.com/category-jekyll/" target="_blank">Jekyll on my blog</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="mydoc_introduction.html">Jekyll Documentation Theme</a></li>
+                        
+                        
+                        
+                        <li><a href="p1_landing_page.html">Product 1</a></li>
+                        
+                        
+                        
+                        <li><a href="p2_landing_page.html">Product 2</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:bess@ibiblio.org?subject=Jekyll documentation theme feedback&body=I have some feedback about the Code Guidelines page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Code Guidelines">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle"> </li>
+    
+    
+    
+    <li>
+        <a href="#">Products</a>
+        <ul>
+            
+            
+            
+            <li><a href="news.html">News</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_introduction.html">Theme instructions</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="p1_landing_page.html">Product 1</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="p2_landing_page.html">Product 2</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Code Guidelines</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+  <h1 id="code-guidelines">Code Guidelines</h1>
+
+<h2 id="github-workflow-forking-and-cloning">GitHub workflow, forking and cloning</h2>
+
+<p>To start working on a Hydra codebase quickly, you may wish to fork it to your own organization and then clone it locally. This will allow you to push your work up for review and for pull requests. The advantage of forking existing codebases is that you can do so without asking anyone and get started quickly. The disadvantage is that there’s a risk of writing code that only lives in your fork, which – if you wind up running this in production, or pointing other production code at your fork – is a surefire way to make your work difficult to upgrade.</p>
+
+<p>You will probably want to request access to push your work directly to Hydra codebases (see <a href="formalities.md">formalities</a>).</p>
+
+<h2 id="making-changes">Making changes</h2>
+
+<p>To start, make sure you have the latest commits from the upstream codebase’s default branch (which is usually the <code class="highlighter-rouge">master</code> branch). Then create a new topic or feature branch for the work you’ll be doing. In practice, it doesn’t much matter what you name this branch – some name it based on a brief description of the changes they will be making, and some include the issue number, but neither of these are ever included in the code review process. Do not work directly on the <code class="highlighter-rouge">master</code> branch, which is a protected branch.</p>
+
+<p>As you start working on your contribution, feel free to make commits as often as makes sense to you since no one will see these until you push your code up to GitHub; there will be an opportunity later to squash your commits and make sure your commit message is written succinctly and with sufficient detail. (Your commit message will be pulled in as the default description of your PR, so investing some time in writing a <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">high-quality commit message</a> will help you, and code reviewers, later.)</p>
+
+<p>We also recommend writing tests early and running them often, making small commits as you go. This gives you frequent checkpoints to make sure you do not dig yourself into a deep hole or become bogged down towards the end of working on your changes.</p>
+
+<h2 id="testing-and-test-coverage">Testing and test coverage</h2>
+
+<p>Many developers in the Hydra community practice <a href="https://en.wikipedia.org/wiki/Test-driven_development">test-driven development</a>, and you will notice as you begin submitting pull requests that the common code review process requires that you cover all code changes with tests; this is equally true of bugfixes, features, and refactoring changes.</p>
+
+<p>We tend to use RSpec as our testing tool of choice, with Capybara for feature tests, and our tests tend to conform to <a href="http://betterspecs.org/">community-driven testing guidelines</a>. All of our codebases on GitHub integrate with the Travis continuous integration service, which allows reviewers to see if changes made in pull requests have a passing test suite. We also tend to use Coveralls to determine whether the proposed changes have increased or decreased overall code coverage.</p>
+
+<h2 id="style-guidelines">Style guidelines</h2>
+
+<p>The Hydra community uses a somewhat modified version of the default Ruby style conventions provided by the Rubocop tool. If your pull request contains style violations, continuous integration builds will fail quickly and your work will be in an unmergeable state.</p>
+
+<p>Fortunately, it’s very easy (and fast) to check this in your development environment. Run the <code class="highlighter-rouge">rubocop</code> command to see if your changes pass muster. If they do not, Rubocop also supports an auto-fix flag for some violations. To do this, run <code class="highlighter-rouge">rubocop -a</code> – but we recommend committing your changes first, because though this seldom happens, Rubocop can sometimes “fix” your code into a state that causes tests to fail. (Don’t worry about having to commit earlier, or more, than you intended; you can always squash your commits later.)</p>
+
+<h2 id="pull-request-size-and-shape">Pull request size and shape</h2>
+
+<p>We have found over the years that it is best when pull requests are small; targeted at a specific issue; and pushed up quickly for review.</p>
+
+<p>Keep pull requests small, where possible. Changes to the codebase that surpass roughly 400 lines at a time become difficult to review, which can limit the number of code reviewers and can delay your pull request getting merged. This also causes the developer some pain, because the longer a contribution sits off in a branch, the more times it will need to be rebased on the master branch which means your test suite may start failing, you may have merge conflicts to deal with, and so forth.</p>
+
+<p>Keep pull requests targeted. For instance, if you’re fixing a bug, do not introduce a new feature or fix another bug. Only commit to a refactoring if you can do it while keeping the PR small and without touching parts of the codebase unrelated to your bug. If you are inclined to add one or more refactorings to a PR, you may also want to consult with other Hydra developers (see [communication guidelines(communication.md)) in advance of doing so.</p>
+
+<p>Push branches up quickly for review. We have found that work sitting in unpushed branches for longer than a day or so is likely to cause frustration. It is better for the author of the code, and the reviewers of the code, to see it sooner so there’s time to provide feedback before a large commitment is made. If you are choosing between copying/pasting code to a snippet site like <a href="http://gist.github.com/">Gist</a> and pushing your branch, please push your branch; it allows developers to review your code in the context of the codebase with its commit history.</p>
+
+<p>As you assign yourself to issues, if you find that the code you’re writing will be difficult to keep small, stay targeted, or push quickly, you have well have picked up an issue that is too large and that needs decomposition. Please talk to fellow Hydra developers, or the codebase’s product owner if it has a clear owner, for advice about continuing.</p>
+
+<h2 id="submitting-changes">Submitting changes</h2>
+
+<p>When you are satisfied that the code you have written adequately addresses the issue you’re working on, and your test suite covers your changes and is green, it’s time to prepare your changes for a pull request. We recommend that you <a href="http://ndlib.github.io/practices/one-commit-per-pull-request/">squash all of your commits down into a single commit</a>.</p>
+
+<p>Next, you’ll want to check that your branch is up to date with its parent branch (likely to be <code class="highlighter-rouge">master</code>); if you kept your PR small and targeted, you will find that this isn’t a difficult process. Make sure your code conforms to style guidelines and your test suite is green, and then push your branch and create a pull request.</p>
+
+<h2 id="additional-resources">Additional resources</h2>
+
+<p>The <a href="https://docs.google.com/document/d/1wnpJBS-Q9Yswp7r2fGfzvOzjjz0C971INU3pDfgZd8k/edit#heading=h.avateqba3goc">Hydra Camp Resources List</a>
+has links to lots of good resources on general Ruby information, IDEs, data models, example Hydra
+heads, etc.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Hydra Community. All rights reserved. <br />
+ Site last generated: Mar 30, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

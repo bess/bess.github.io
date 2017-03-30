@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Code review | Hydra Developer Knowledge Base</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Hydra Developer Knowledge Base</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jekyll Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://github.com/tomjohnson1492/documentation-theme-jekyll" target="_blank">Github Repo</a></li>
+                        
+                        
+                        
+                        <li><a href="https://talk.jekyllrb.com" target="_blank">Jekyll Talk</a></li>
+                        
+                        
+                        
+                        <li><a href="http://jekyllrb.com/docs/home/" target="_blank">Jekyll documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="http://stackoverflow.com/questions/tagged/jekyll" target="_blank">Jekyll on Stack Overflow</a></li>
+                        
+                        
+                        
+                        <li><a href="http://idratherbewriting.com/category-jekyll/" target="_blank">Jekyll on my blog</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="mydoc_introduction.html">Jekyll Documentation Theme</a></li>
+                        
+                        
+                        
+                        <li><a href="p1_landing_page.html">Product 1</a></li>
+                        
+                        
+                        
+                        <li><a href="p2_landing_page.html">Product 2</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:bess@ibiblio.org?subject=Jekyll documentation theme feedback&body=I have some feedback about the Code review page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Code review">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle"> </li>
+    
+    
+    
+    <li>
+        <a href="#">Products</a>
+        <ul>
+            
+            
+            
+            <li><a href="news.html">News</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_introduction.html">Theme instructions</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="p1_landing_page.html">Product 1</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="p2_landing_page.html">Product 2</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Code review</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+  <h1 id="code-review">Code review</h1>
+
+<h2 id="when-submitting-a-pull-request">When Submitting a Pull Request</h2>
+
+<p>When you have code ready to be reviewed, and it meets the <a href="code.md">code guidelines</a>, open a pull
+request to ask for it to be merged into the codebase.</p>
+
+<p>To help make the review go smoothly, here are some general guidelines:</p>
+<ul>
+  <li>Your pull request should address a single issue.
+    <ul>
+      <li>It’s better to split large or complicated PRs into discrete steps if possible.  This makes
+review more manageable and reduces the risk of conflicts with other changes.</li>
+    </ul>
+  </li>
+  <li>Give your pull request a brief title, and use the description to provide key information:
+    <ul>
+      <li>Provide a list of the key changes</li>
+      <li>If your PR addresses an existing ticket, link to it with “Fixes #123”.  This will make it easy
+to refer back to the original ticket and automatically close it when the PR is merged.</li>
+      <li>If you’ve discussed the issue, or just want to alert someone to your PR, tag them by including
+their @username.</li>
+      <li>Link to relevant resources, such as Wiki pages, mailing list threads, specifications, or other
+tickets.  This makes it easier to understand the full context of your PR.</li>
+    </ul>
+  </li>
+  <li>Please be patient.  Your PR may not be reviewed right away, since the people doing code review
+are often busy, and may be traveling, in a different time zone, or otherwise not available to
+review your code immediately.
+    <ul>
+      <li>Especially if it’s blocking other work, it’s fine to ask someone to review, either by tagging
+them in a comment or asking on <a href="communication.md#slack">Slack</a> or at the <a href="communication.md#tech-call">weekly tech call</a>.</li>
+    </ul>
+  </li>
+  <li>Respond to code review comments, with discussion where it’s appropriate or by pushing additional
+commits to the branch.  They will be added to the same PR automatically.</li>
+  <li>If another PR is merged and conflicts with your changes, you may need to rebase your PR.
+    <ul>
+      <li>See <a href="https://help.github.com/articles/about-git-rebase/">GitHub’s rebasing documentation</a> and
+<a href="http://ndlib.github.io/practices/one-commit-per-pull-request/">One Commit Per Pull Request</a>
+for more information on rebasing.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="when-reviewing-a-pull-request">When Reviewing a Pull Request</h2>
+
+<p>Pull requests are evaluated in many different ways; fortunately, we have tools to help us with code
+review so that human review can focus on overall code quality and maintainability. For instance, we
+use:</p>
+
+<ul>
+  <li>TravisCI, to ensure the test suite is passing</li>
+  <li>Rubocop, to be consistent w/ a baseline of Ruby style conventions</li>
+  <li>Coveralls, to ensure code changes are covered by test changes</li>
+  <li>Hound, to be consistent w/ Javascript and CSS style conventions</li>
+  <li>CodeClimate, to flag obvious code smells early for remediation</li>
+</ul>
+
+<p>When reviewing a pull request, please take the time to review the changes and get a sense of what
+is being changed.</p>
+
+<p>The key things to focus on are:</p>
+
+<ul>
+  <li>Are the PR description and commit messages clear?</li>
+  <li>Do the functional code changes match the PR description?</li>
+  <li>Does the PR contain tests for new features or bugfixes?
+    <ul>
+      <li>Not all PRs require tests, such as wording changes or simple refactoring.</li>
+    </ul>
+  </li>
+  <li>Does the commit contain more than it should? Are two separate concerns being addressed in one
+commit?</li>
+</ul>
+
+<p>As a reviewer, it’s also your responsibility to make sure:</p>
+
+<ul>
+  <li>Does the submitter have a signed CLA <a href="https://wiki.duraspace.org/display/hydra/CLA+submission+list">on file</a>?</li>
+  <li>Did the Travis tests complete successfully?</li>
+  <li>Is there a significant drop in code coverage?</li>
+  <li>Do all new or changed methods, modules, and classes have comments?</li>
+</ul>
+
+<h2 id="merging-pull-requests">Merging Pull Requests</h2>
+
+<p>When merging pull requests:</p>
+
+<ul>
+  <li>Give discussion time to settle down.  When there is a contentious discussion, please allow 24
+hours before merging to make sure everyone’s had a chance to respond.</li>
+  <li>It is considered “poor form” to merge your own request, and you should be cautious when merging
+pull requests from other developers at your own insitution.</li>
+  <li>If you are uncertain, bring other contributors into the conversation by creating a comment that
+includes their @username.</li>
+  <li>If you like the pull request, but want others to chime in, create a +1 comment and tag a user.</li>
+</ul>
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Hydra Community. All rights reserved. <br />
+ Site last generated: Mar 30, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>
