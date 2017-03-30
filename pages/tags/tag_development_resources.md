@@ -1,8 +1,8 @@
 ---
-title: "Formatting pages"
-tagName: formatting
+title: "Development Resources"
+tagName: development_resources
 search: exclude
-permalink: tag_formatting.html
+permalink: tag_development_resources.html
 sidebar: mydoc_sidebar
 folder: tags
 ---

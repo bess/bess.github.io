@@ -1,8 +1,8 @@
 ---
-title: "Single sourcing pages"
-tagName: single_sourcing
+title: "Development Community"
+tagName: community
 search: exclude
-permalink: tag_single_sourcing.html
+permalink: tag_community.html
 sidebar: mydoc_sidebar
 folder: tags
 ---
