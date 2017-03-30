@@ -4,6 +4,7 @@ keywords: sample homepage
 tags: [getting_started]
 sidebar: mydoc_sidebar
 permalink: index.html
+toc: false
 ---
 <div class="row">
          <div class="col-lg-12">
