@@ -1,3 +1,11 @@
+---
+title: Code Review
+last_updated: March 30, 2017
+tags: [getting_started, community]
+sidebar: hydra_sidebar
+permalink: review.html
+folder: hydra
+---
 # Code review
 
 ## When Submitting a Pull Request

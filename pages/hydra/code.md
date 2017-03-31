@@ -1,3 +1,12 @@
+---
+title: Code Guidelines
+last_updated: March 30, 2017
+tags: [getting_started]
+sidebar: hydra_sidebar
+permalink: code.html
+folder: hydra
+---
+
 # Code Guidelines
 
 ## GitHub workflow, forking and cloning

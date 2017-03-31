@@ -25,6 +25,18 @@
   
   
   
+  <url>
+    <loc>http://localhost:4000/code.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/communication.html</loc>
+  </url>
+  
+  
+  
   
   
   <url>
@@ -545,61 +557,43 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   <url>
-    <loc>http://localhost:4000/pages/hydra/code.html</loc>
+    <loc>http://localhost:4000/review.html</loc>
   </url>
   
   
   
-  <url>
-    <loc>http://localhost:4000/pages/hydra/communication.html</loc>
-  </url>
   
   
   
-  <url>
-    <loc>http://localhost:4000/pages/hydra/review.html</loc>
-  </url>
   
   
   
-  <url>
-    <loc>http://localhost:4000/pages/hydra/</loc>
-  </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
 </urlset>

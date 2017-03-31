@@ -4,8 +4,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>Communication | Hydra Developer Knowledge Base</title>
+<meta name="keywords" content="getting_started,  ">
+<title>Code Guidelines | Hydra Developer Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -156,7 +156,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:bess@ibiblio.org?subject=Jekyll documentation theme feedback&body=I have some feedback about the Communication page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:bess@ibiblio.org?subject=Jekyll documentation theme feedback&body=I have some feedback about the Code Guidelines page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -174,7 +174,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Communication">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Code Guidelines">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -265,7 +265,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Communication</h1>
+   <h1 class="post-title-main">Code Guidelines</h1>
 </div>
 
 
@@ -299,88 +299,68 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h1 id="communication">Communication</h1>
+  <h1 id="code-guidelines">Code Guidelines</h1>
 
-<p>This page details the communication channels used by developers in the Hydra community.  For more
-information on broader community communication, please see the Hydra wiki
-<a href="https://wiki.duraspace.org/pages/viewpage.action?pageId=43910187">Get in touch!</a> page.</p>
+<h2 id="github-workflow-forking-and-cloning">GitHub workflow, forking and cloning</h2>
 
-<h2 id="regular-calls">Regular Calls</h2>
+<p>To start working on a Hydra codebase quickly, you may wish to fork it to your own organization and then clone it locally. This will allow you to push your work up for review and for pull requests. The advantage of forking existing codebases is that you can do so without asking anyone and get started quickly. The disadvantage is that there’s a risk of writing code that only lives in your fork, which – if you wind up running this in production, or pointing other production code at your fork – is a surefire way to make your work difficult to upgrade.</p>
 
-<ul>
-  <li><a href="https://wiki.duraspace.org/pages/viewpage.action?pageId=43910187#Getintouch!-TechnicalCall">Weekly Technical Call</a> for technical discussion, and coordinating releases and code review</li>
-  <li><a href="https://wiki.duraspace.org/pages/viewpage.action?pageId=43910187#Getintouch!-MonthlyPartnerCall">Monthly Partner Call</a> complements the tech call with a focus on community and functional progress</li>
-  <li>Community Sprint Calls are also organized to coordinate development</li>
-</ul>
+<p>You will probably want to request access to push your work directly to Hydra codebases (see <a href="formalities.md">formalities</a>).</p>
 
-<h2 id="slack">Slack</h2>
+<h2 id="making-changes">Making changes</h2>
 
-<p>Slack has become the primary mode of synchronous communication in the Hydra community. There is a Hydra Slack team that is used for discussion, questions, announcements, interest groups, and working groups. Topics span very general discussion to in-depth interest/working group work, from metadata work to development coordination. Anyone can create a new channel within the Hydra Slack team once they have registered for an account.</p>
+<p>To start, make sure you have the latest commits from the upstream codebase’s default branch (which is usually the <code class="highlighter-rouge">master</code> branch). Then create a new topic or feature branch for the work you’ll be doing. In practice, it doesn’t much matter what you name this branch – some name it based on a brief description of the changes they will be making, and some include the issue number, but neither of these are ever included in the code review process. Do not work directly on the <code class="highlighter-rouge">master</code> branch, which is a protected branch.</p>
 
-<ul>
-  <li>Slack: http://project-hydra.slack.com/</li>
-  <li>Signup form: http://slack.projecthydra.org/</li>
-</ul>
+<p>As you start working on your contribution, feel free to make commits as often as makes sense to you since no one will see these until you push your code up to GitHub; there will be an opportunity later to squash your commits and make sure your commit message is written succinctly and with sufficient detail. (Your commit message will be pulled in as the default description of your PR, so investing some time in writing a <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">high-quality commit message</a> will help you, and code reviewers, later.)</p>
 
-<h2 id="mailing-lists">Mailing Lists</h2>
+<p>We also recommend writing tests early and running them often, making small commits as you go. This gives you frequent checkpoints to make sure you do not dig yourself into a deep hole or become bogged down towards the end of working on your changes.</p>
 
-<ul>
-  <li>https://groups.google.com/group/hydra-community for general Hydra discussion</li>
-  <li>https://groups.google.com/group/hydra-tech for technical discussion</li>
-  <li>and several more listed in the <a href="https://wiki.duraspace.org/pages/viewpage.action?pageId=43910187#Getintouch!-MailingLists">Hydra wiki</a></li>
-</ul>
+<h2 id="testing-and-test-coverage">Testing and test coverage</h2>
 
-<h2 id="wiki">Wiki</h2>
+<p>Many developers in the Hydra community practice <a href="https://en.wikipedia.org/wiki/Test-driven_development">test-driven development</a>, and you will notice as you begin submitting pull requests that the common code review process requires that you cover all code changes with tests; this is equally true of bugfixes, features, and refactoring changes.</p>
 
-<ul>
-  <li>DuraSpace wiki: https://wiki.duraspace.org/display/hydra/The+Hydra+Project for general project
-documentation, meeting notes, and working group pages
-    <ul>
-      <li>To request an account, please email <a href="mailto:sysadmin@duraspace.org">sysadmin@duraspace.org</a></li>
-    </ul>
-  </li>
-  <li>GitHub codebase-specific wikis for technical documentation and tutorials: e.g.,
-    <ul>
-      <li>https://github.com/projecthydra/hydra-head/wiki</li>
-      <li>https://github.com/projecthydra/sufia/wiki</li>
-    </ul>
-  </li>
-</ul>
+<p>We tend to use RSpec as our testing tool of choice, with Capybara for feature tests, and our tests tend to conform to <a href="http://betterspecs.org/">community-driven testing guidelines</a>. All of our codebases on GitHub integrate with the Travis continuous integration service, which allows reviewers to see if changes made in pull requests have a passing test suite. We also tend to use Coveralls to determine whether the proposed changes have increased or decreased overall code coverage.</p>
 
-<h2 id="conferences">Conferences</h2>
+<h2 id="style-guidelines">Style guidelines</h2>
 
-<ul>
-  <li><a href="https://wiki.duraspace.org/display/hydra/Hydra+Connect+Meetings">HydraConnect</a>: the annual go-to
-event for the entire Hydra community, primarily geared towards connecting with fellow Hydra
-community members to learn how they are using Hydra</li>
-  <li>Developer Congresses: these community hackfests tend to be held 1-2 times per year, and have a strong record of delivering advances in our community codebases and helping to onboard new Hydra developers</li>
-  <li>Other Conferences
-    <ul>
-      <li><a href="http://code4lib.org/conference">Code4lib</a></li>
-      <li><a href="http://library.stanford.edu/projects/ldcx">LDCX</a></li>
-      <li><a href="http://openrepositories.org/">Open Repositories</a></li>
-      <li><a href="https://www.diglib.org/forums/">Digital Library Federation Forum</a></li>
-    </ul>
-  </li>
-</ul>
+<p>The Hydra community uses a somewhat modified version of the default Ruby style conventions provided by the Rubocop tool. If your pull request contains style violations, continuous integration builds will fail quickly and your work will be in an unmergeable state.</p>
 
-<h2 id="training">Training</h2>
+<p>Fortunately, it’s very easy (and fast) to check this in your development environment. Run the <code class="highlighter-rouge">rubocop</code> command to see if your changes pass muster. If they do not, Rubocop also supports an auto-fix flag for some violations. To do this, run <code class="highlighter-rouge">rubocop -a</code> – but we recommend committing your changes first, because though this seldom happens, Rubocop can sometimes “fix” your code into a state that causes tests to fail. (Don’t worry about having to commit earlier, or more, than you intended; you can always squash your commits later.)</p>
 
-<ul>
-  <li><a href="https://curationexperts.com/our-services/hydra-camp/">HydraCamp</a>: for many partners, one of the
-first steps to joining the Hydra community was, and remains, sending a team of software developers
-to HydraCamp to learn the common practices of our community. We generally hold 3-4 HydraCamps per
-year.</li>
-</ul>
+<h2 id="pull-request-size-and-shape">Pull request size and shape</h2>
 
-<h2 id="irc">IRC</h2>
+<p>We have found over the years that it is best when pull requests are small; targeted at a specific issue; and pushed up quickly for review.</p>
 
-<p>Slack is more active, but there is still a #projecthydra IRC channel on chat.freenode.net.  Connect
-using your favorite IRC client, or using http://webchat.freenode.net/.  If you are new to IRC, the
-Code4lib <a href="http://code4lib.org/irc">IRC wiki page</a> is a good introduction.</p>
+<p>Keep pull requests small, where possible. Changes to the codebase that surpass roughly 400 lines at a time become difficult to review, which can limit the number of code reviewers and can delay your pull request getting merged. This also causes the developer some pain, because the longer a contribution sits off in a branch, the more times it will need to be rebased on the master branch which means your test suite may start failing, you may have merge conflicts to deal with, and so forth.</p>
+
+<p>Keep pull requests targeted. For instance, if you’re fixing a bug, do not introduce a new feature or fix another bug. Only commit to a refactoring if you can do it while keeping the PR small and without touching parts of the codebase unrelated to your bug. If you are inclined to add one or more refactorings to a PR, you may also want to consult with other Hydra developers (see [communication guidelines(communication.md)) in advance of doing so.</p>
+
+<p>Push branches up quickly for review. We have found that work sitting in unpushed branches for longer than a day or so is likely to cause frustration. It is better for the author of the code, and the reviewers of the code, to see it sooner so there’s time to provide feedback before a large commitment is made. If you are choosing between copying/pasting code to a snippet site like <a href="http://gist.github.com/">Gist</a> and pushing your branch, please push your branch; it allows developers to review your code in the context of the codebase with its commit history.</p>
+
+<p>As you assign yourself to issues, if you find that the code you’re writing will be difficult to keep small, stay targeted, or push quickly, you have well have picked up an issue that is too large and that needs decomposition. Please talk to fellow Hydra developers, or the codebase’s product owner if it has a clear owner, for advice about continuing.</p>
+
+<h2 id="submitting-changes">Submitting changes</h2>
+
+<p>When you are satisfied that the code you have written adequately addresses the issue you’re working on, and your test suite covers your changes and is green, it’s time to prepare your changes for a pull request. We recommend that you <a href="http://ndlib.github.io/practices/one-commit-per-pull-request/">squash all of your commits down into a single commit</a>.</p>
+
+<p>Next, you’ll want to check that your branch is up to date with its parent branch (likely to be <code class="highlighter-rouge">master</code>); if you kept your PR small and targeted, you will find that this isn’t a difficult process. Make sure your code conforms to style guidelines and your test suite is green, and then push your branch and create a pull request.</p>
+
+<h2 id="additional-resources">Additional resources</h2>
+
+<p>The <a href="https://docs.google.com/document/d/1wnpJBS-Q9Yswp7r2fGfzvOzjjz0C971INU3pDfgZd8k/edit#heading=h.avateqba3goc">Hydra Camp Resources List</a>
+has links to lots of good resources on general Ruby information, IDEs, data models, example Hydra
+heads, etc.</p>
 
 
     <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
         
     </div>
 
@@ -394,7 +374,7 @@ Code4lib <a href="http://code4lib.org/irc">IRC wiki page</a> is a good introduct
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Hydra Community. All rights reserved. <br />
- Site last generated: Mar 30, 2017 <br />
+<span>Page last updated:</span> March 30, 2017<br/> Site last generated: Mar 30, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

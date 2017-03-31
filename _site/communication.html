@@ -4,8 +4,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>Technical On-boarding | Hydra Developer Knowledge Base</title>
+<meta name="keywords" content="getting_startedcommunity,  ">
+<title>Communication | Hydra Developer Knowledge Base</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -156,7 +156,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:bess@ibiblio.org?subject=Jekyll documentation theme feedback&body=I have some feedback about the Technical On-boarding page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:bess@ibiblio.org?subject=Jekyll documentation theme feedback&body=I have some feedback about the Communication page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -174,7 +174,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Technical On-boarding">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Communication">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -265,7 +265,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Technical On-boarding</h1>
+   <h1 class="post-title-main">Communication</h1>
 </div>
 
 
@@ -299,25 +299,98 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h1 id="technical-on-boarding">Technical On-boarding</h1>
+  <h1 id="communication">Communication</h1>
 
-<h2 id="contents">Contents</h2>
+<p>This page details the communication channels used by developers in the Hydra community.  For more
+information on broader community communication, please see the Hydra wiki
+<a href="https://wiki.duraspace.org/pages/viewpage.action?pageId=43910187">Get in touch!</a> page.</p>
 
-<ol>
-  <li><a href="orientation.md">Orientation</a>: What is Hydra?</li>
-  <li><a href="formalities.md">Formalities</a>: What are the formal prerequisites to getting started as a Hydra developer?</li>
-  <li><a href="communication.md">Communication</a>: How and where do we connect?</li>
-  <li><a href="issues.md">Issues</a>: How we use GitHub issues to track work, and what makes a good issue?</li>
-  <li><a href="code.md">Code Guidelines</a>: What are our expectations of code contributions?</li>
-  <li><a href="review.md">Code Review</a>: How to submit and review pull requests?</li>
-</ol>
+<h2 id="regular-calls">Regular Calls</h2>
 
-<p>These pages are drafts of wiki pages intended to be companions to the <a href="https://github.com/projecthydra/hydra/blob/master/CONTRIBUTING.md">Hydra contribution guidelines</a>, prepared for the Technical On-boarding workshop at <a href="https://wiki.duraspace.org/display/hydra/Hydra+Connect+2016">HydraConnect 2016</a>.
-These pages expand on the information from multiple locations and provide more context and links for new developers
-interested in contributing to the Hydra project.</p>
+<ul>
+  <li><a href="https://wiki.duraspace.org/pages/viewpage.action?pageId=43910187#Getintouch!-TechnicalCall">Weekly Technical Call</a> for technical discussion, and coordinating releases and code review</li>
+  <li><a href="https://wiki.duraspace.org/pages/viewpage.action?pageId=43910187#Getintouch!-MonthlyPartnerCall">Monthly Partner Call</a> complements the tech call with a focus on community and functional progress</li>
+  <li>Community Sprint Calls are also organized to coordinate development</li>
+</ul>
+
+<h2 id="slack">Slack</h2>
+
+<p>Slack has become the primary mode of synchronous communication in the Hydra community. There is a Hydra Slack team that is used for discussion, questions, announcements, interest groups, and working groups. Topics span very general discussion to in-depth interest/working group work, from metadata work to development coordination. Anyone can create a new channel within the Hydra Slack team once they have registered for an account.</p>
+
+<ul>
+  <li>Slack: http://project-hydra.slack.com/</li>
+  <li>Signup form: http://slack.projecthydra.org/</li>
+</ul>
+
+<h2 id="mailing-lists">Mailing Lists</h2>
+
+<ul>
+  <li>https://groups.google.com/group/hydra-community for general Hydra discussion</li>
+  <li>https://groups.google.com/group/hydra-tech for technical discussion</li>
+  <li>and several more listed in the <a href="https://wiki.duraspace.org/pages/viewpage.action?pageId=43910187#Getintouch!-MailingLists">Hydra wiki</a></li>
+</ul>
+
+<h2 id="wiki">Wiki</h2>
+
+<ul>
+  <li>DuraSpace wiki: https://wiki.duraspace.org/display/hydra/The+Hydra+Project for general project
+documentation, meeting notes, and working group pages
+    <ul>
+      <li>To request an account, please email <a href="mailto:sysadmin@duraspace.org">sysadmin@duraspace.org</a></li>
+    </ul>
+  </li>
+  <li>GitHub codebase-specific wikis for technical documentation and tutorials: e.g.,
+    <ul>
+      <li>https://github.com/projecthydra/hydra-head/wiki</li>
+      <li>https://github.com/projecthydra/sufia/wiki</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="conferences">Conferences</h2>
+
+<ul>
+  <li><a href="https://wiki.duraspace.org/display/hydra/Hydra+Connect+Meetings">HydraConnect</a>: the annual go-to
+event for the entire Hydra community, primarily geared towards connecting with fellow Hydra
+community members to learn how they are using Hydra</li>
+  <li>Developer Congresses: these community hackfests tend to be held 1-2 times per year, and have a strong record of delivering advances in our community codebases and helping to onboard new Hydra developers</li>
+  <li>Other Conferences
+    <ul>
+      <li><a href="http://code4lib.org/conference">Code4lib</a></li>
+      <li><a href="http://library.stanford.edu/projects/ldcx">LDCX</a></li>
+      <li><a href="http://openrepositories.org/">Open Repositories</a></li>
+      <li><a href="https://www.diglib.org/forums/">Digital Library Federation Forum</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="training">Training</h2>
+
+<ul>
+  <li><a href="https://curationexperts.com/our-services/hydra-camp/">HydraCamp</a>: for many partners, one of the
+first steps to joining the Hydra community was, and remains, sending a team of software developers
+to HydraCamp to learn the common practices of our community. We generally hold 3-4 HydraCamps per
+year.</li>
+</ul>
+
+<h2 id="irc">IRC</h2>
+
+<p>Slack is more active, but there is still a #projecthydra IRC channel on chat.freenode.net.  Connect
+using your favorite IRC client, or using http://webchat.freenode.net/.  If you are new to IRC, the
+Code4lib <a href="http://code4lib.org/irc">IRC wiki page</a> is a good introduction.</p>
 
 
     <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
+        
+        
         
     </div>
 
@@ -331,7 +404,7 @@ interested in contributing to the Hydra project.</p>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Hydra Community. All rights reserved. <br />
- Site last generated: Mar 30, 2017 <br />
+<span>Page last updated:</span> March 30, 2017<br/> Site last generated: Mar 30, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

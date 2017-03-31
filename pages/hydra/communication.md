@@ -1,3 +1,11 @@
+---
+title: Communication
+last_updated: March 30, 2017
+tags: [getting_started, community]
+sidebar: hydra_sidebar
+permalink: communication.html
+folder: hydra
+---
 # Communication
 
 This page details the communication channels used by developers in the Hydra community.  For more
