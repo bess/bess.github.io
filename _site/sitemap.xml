@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/bess-sadler/solar-vortex-at-UCSD/</loc>
+<lastmod>2020-01-16T07:04:55-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/bess-sadler/I-aim-to-be-the-Granny-Weatherwax-of-free-software/</loc>
+<lastmod>2020-07-15T09:03:30-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/bess-sadler/about/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/bess-sadler/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/bess-sadler/publications/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/bess-sadler/resume/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/bess-sadler/tags/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/bess-sadler/talks/</loc>
+</url>
+</urlset>

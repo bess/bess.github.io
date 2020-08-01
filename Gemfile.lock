@@ -64,7 +64,6 @@ DEPENDENCIES
   jekyll (>= 3.8.4)
   jekyll-paginate
   jekyll-sitemap
-  tzinfo-data
 
 BUNDLED WITH
    2.1.4
